@@ -12,8 +12,8 @@ const BookingList = () => {
     useEffect(() => {
         fetch(`https://protected-basin-55412.herokuapp.com/bookingList?email=` + loggedInUser.email)
             .then(res => res.json())
-            .then(data => console.log(data))
-    }, [])
+            .then(data => setBookings(data))
+    }, [loggedInUser.email])
 
     return (
         <div className="row w-100">
