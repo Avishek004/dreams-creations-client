@@ -38,7 +38,7 @@ const Login = () => {
                 sessionStorage.setItem('token', idToken);
                 history.replace(from);
             }).catch(function (error) {
-                // Handle error
+                console.log(error);
             });
     }
     return (

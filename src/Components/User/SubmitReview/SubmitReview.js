@@ -10,14 +10,14 @@ const SubmitReview = () => {
     const [disabled, setDisabled] = useState(true);
 
     const onSubmit = data => {
-        console.log(data);
+        
         const reviewData = {
             name: data.name,
             company: data.company,
             review: data.review,
             image: imageURL
         }
-        console.log(reviewData);
+        
         const url = `https://protected-basin-55412.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',

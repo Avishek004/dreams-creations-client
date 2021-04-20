@@ -10,14 +10,14 @@ const AddServices = () => {
     const [disabled, setDisabled] = useState(true);
 
     const onSubmit = data => {
-        console.log(data);
+        
         const itemData = {
             name: data.name,
             price: data.price,
             info: data.info,
             image: imageURL
         }
-        console.log(itemData);
+        
         const url = `https://protected-basin-55412.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',

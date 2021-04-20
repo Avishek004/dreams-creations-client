@@ -10,7 +10,7 @@ const AddAdmin = () => {
         const adminData = {
             email: data.email
         }
-        console.log(adminData);
+        
         const url = `https://protected-basin-55412.herokuapp.com/addAdmin`;
         fetch(url, {
             method: 'POST',

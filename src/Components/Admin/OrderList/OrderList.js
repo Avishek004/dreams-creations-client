@@ -13,7 +13,6 @@ const OrderList = () => {
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
-    console.log(orders);
 
     const handleSelect = event => {
         setValue(event);
@@ -47,7 +46,7 @@ const OrderList = () => {
                                     <Form onSubmit={handleSubmit(onSubmit)}>
                                         <div className="d-flex">
                                             <Form.Control defaultValue={value} name="status" ref={register({ required: true })} />
-                                            <DropdownButton onSelect={handleSelect}>
+                                            <DropdownButton onSelect={handleSelect} title="Pending">
                                                 <Dropdown.Item eventKey="Pending" >Pending</Dropdown.Item>
                                                 <Dropdown.Item eventKey="On Going" >On Going</Dropdown.Item>
                                                 <Dropdown.Item eventKey="Done">Done</Dropdown.Item>
@@ -56,7 +55,8 @@ const OrderList = () => {
                                     </Form>
                                 </td>
                             </tr>
-                        </tbody>)
+                        </tbody>
+                        )
                     }
                 </Table>
             </div>

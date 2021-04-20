@@ -7,7 +7,7 @@ const Reviews = () => {
     useEffect(() => {
         fetch('https://protected-basin-55412.herokuapp.com/reviews')
             .then(res => res.json())
-            .then(data => setReviews(data))
+            .then(data => setReviews(data.slice(0, 6)))
     }, [])
 
     return (
@@ -16,7 +16,7 @@ const Reviews = () => {
             <div className="d-flex justify-content-center m-5 ">
                 <div className="row w-100 pb-5">
                     {
-                        reviews.map(reviewData => <Review reviewData={reviewData}></Review>)
+                        reviews.map(reviewData => <Review key={reviewData._id} reviewData={reviewData}></Review>)
                     }
                 </div>
             </div>

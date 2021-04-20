@@ -6,18 +6,22 @@ import './Footer.css';
 
 const footerData = [
     {
+        id: 1,
         title: 'Privacy Policy',
         link: '/privacy-policy'
     },
     {
+        id: 2,
         title: 'Terms Of Service',
         link: '/terms-of-service'
     },
     {
+        id: 3,
         title: 'Free Event Setup',
         link: '/free-event-setup'
     },
     {
+        id: 4,
         title: 'Get Appointments',
         link: '/get-appointments'
     }
@@ -36,7 +40,7 @@ const Footer = () => {
                 <div className="col-md-3">
                     <h2>Site Links</h2>
                     {
-                        footerData.map(footer => <SiteFooter footer={footer}></SiteFooter>)
+                        footerData.map(footer => <SiteFooter key={footer.id} footer={footer}></SiteFooter>)
                     }
                 </div>
                 <div className="col-md-3">

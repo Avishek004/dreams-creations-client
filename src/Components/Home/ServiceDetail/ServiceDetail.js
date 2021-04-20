@@ -4,14 +4,12 @@ import { useHistory } from 'react-router-dom';
 import './ServiceDetail.css';
 
 const ServiceDetail = ({ service }) => {
-    console.log(service);
     const { name, image, info, price, _id } = service;
 
     const history = useHistory();
     const handleClick = (id) => {
         const url = `/service/${id}`;
         history.push(url)
-        console.log(id);
     }
 
     return (

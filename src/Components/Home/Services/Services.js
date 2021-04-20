@@ -4,6 +4,7 @@ import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    
     useEffect(() => {
         fetch('https://protected-basin-55412.herokuapp.com/services')
             .then(res => res.json())
@@ -16,7 +17,7 @@ const Services = () => {
             <div className="d-flex justify-content-center m-5">
                 <div className="row w-80 m-3 service">
                     {
-                        services.map(service => <ServiceDetail service={service}></ServiceDetail>)
+                        services.map(service => <ServiceDetail key={service._id} service={service}></ServiceDetail>)
                     }
                 </div>
             </div>

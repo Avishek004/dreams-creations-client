@@ -24,7 +24,6 @@ const Book = () => {
     const onSubmit = data => {
         setServiceData(data);
     }
-    console.log(serviceData);
 
     const handlePaymentSuccess = paymentId => {
         const orderDetails = {
@@ -34,7 +33,6 @@ const Book = () => {
             paymentId,
             orderTime: new Date().toDateString('dd/MM/yyyy')
         }
-        console.log(orderDetails);
 
         fetch(`https://protected-basin-55412.herokuapp.com/addOrder`, {
             method: 'POST',

@@ -12,7 +12,7 @@ const ManageServices = () => {
     }, [])
 
     const deleteService = (id) => {
-        console.log(id);
+        
         fetch(`https://protected-basin-55412.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })

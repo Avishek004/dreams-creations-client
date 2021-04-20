@@ -8,18 +8,22 @@ import FeatureDetail from '../FeatureDetail/FeatureDetail';
 
 const featureData = [
     {
+        id: 1,
         title: 'Registration',
         image: Registration
     },
     {
+        id: 2,
         title: 'Promotion',
         image: Promotion
     },
     {
+        id: 3,
         title: 'Community',
         image: Community
     },
     {
+        id: 4,
         title: 'Operations',
         image: Operations
     }
@@ -33,7 +37,7 @@ const Features = () => {
             <div className="d-flex justify-content-center">
                 <div className="row mt-3">
                     {
-                        featureData.map(feature => <FeatureDetail feature={feature}></FeatureDetail>)
+                        featureData.map(feature => <FeatureDetail key={feature.id} feature={feature}></FeatureDetail>)
                     }
                 </div>
             </div>

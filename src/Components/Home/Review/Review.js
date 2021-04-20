@@ -3,6 +3,7 @@ import ReactStars from "react-rating-stars-component";
 import { Card } from 'react-bootstrap';
 
 const Review = ({ reviewData }) => {
+    
     const { name, image, review, company } = reviewData;
 
     const ratingStars = {
