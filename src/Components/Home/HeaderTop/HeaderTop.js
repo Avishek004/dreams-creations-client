@@ -3,7 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const HeaderTop = () => {
     return (
-        <Container>
+        <div>
             <Navbar collapseOnSelect expand="lg">
                 <Navbar.Brand href="/" className="d-flex text-white text-uppercase fw-bolder">Dream Creations</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -17,7 +17,7 @@ const HeaderTop = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </Container>
+        </div>
     );
 };
 
