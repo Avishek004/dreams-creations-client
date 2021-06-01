@@ -5,8 +5,8 @@ const FeatureDetail = ({ feature }) => {
     const { title, image } = feature;
 
     return (
-        <div className="col-md-3">
-            <Card style={{ width: '250px' }} className="rounded-3">
+        <div className="col-md-3 col-sm-6 col-12 p-3">
+            <Card className="rounded-3">
                 <Card.Img src={image} style={{ width: '200px', height: '200px', margin: 'auto' }} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
