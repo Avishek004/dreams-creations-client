@@ -1,11 +1,10 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import HeaderMain from '../../Images/headerMain.jpg';
 
 const MainHeader = () => {
     return (
-        <Container>
-            <div className="row d-flex align-items-center" >
+        <div className="">
+            <div className="row d-flex justify-content-center align-items-center p-5" >
                 <div className="col-md-5 col-sm-6 col-12">
                     <img src={HeaderMain} alt="" className="img-fluid" />
                 </div>
@@ -15,7 +14,7 @@ const MainHeader = () => {
                     <button className="btn btn-primary">GET US</button>
                 </div>
             </div>
-        </Container>
+        </div>
     );
 };
 
