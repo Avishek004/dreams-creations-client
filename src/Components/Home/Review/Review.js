@@ -3,7 +3,7 @@ import ReactStars from "react-rating-stars-component";
 import { Card } from 'react-bootstrap';
 
 const Review = ({ reviewData }) => {
-    
+
     const { name, image, review, company } = reviewData;
 
     const ratingStars = {
@@ -19,14 +19,14 @@ const Review = ({ reviewData }) => {
     };
 
     return (
-        <div className="col-md-4 col-sm-6 col-12 mb-5">
-            <Card>
-                <Card.Img variant="top" src={image} style={{ width: '300px', height: '300px' }} className="m-auto" />
+        <div className="col-md-4 col-sm-6 col-12 pb-3">
+            <Card style={{ height: '750px' }}>
+                <Card.Img variant="top" src={image} className="img-fluid" style={{ height: '300px' }} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{company}</Card.Text>
                     <Card.Text>{review}</Card.Text>
-                    <h6 style={{ border: '0', backgroundColor: 'white' }}>Rating: <ReactStars {...ratingStars} /> </h6>
+                    <Card.Text>Rating: <ReactStars {...ratingStars} /> </Card.Text>
                 </Card.Body>
             </Card>
         </div>

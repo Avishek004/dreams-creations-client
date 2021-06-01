@@ -13,17 +13,17 @@ const Services = () => {
     }, [])
 
     return (
-        <div className="services-container text-center pt-5">
+        <div className="service-container">
             <Container>
-                <h3>Our Services</h3>
-                <div className="d-flex justify-content-center m-5">
-                    <div className="row">
+                <div className="text-center p-5">
+                    <h3>Our Services</h3>
+                    <div className="row d-flex justify-content-center py-5">
                         {
                             services.map(service => <ServiceDetail key={service._id} service={service}></ServiceDetail>)
                         }
                     </div>
+                    <h4>Your vision. Our innovation. Event solutions.</h4>
                 </div>
-                <h4>Your vision. Our innovation. Event solutions.</h4>
             </Container>
         </div>
     );

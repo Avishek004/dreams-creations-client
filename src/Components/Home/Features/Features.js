@@ -32,15 +32,17 @@ const featureData = [
 
 const Features = () => {
     return (
-        <section className="feature-container mt-5">
+        <section className="feature-container">
             <Container>
-                <h2 className="text-uppercase fw-bold">Sit back while we create the experience of a lifetime</h2>
-                <h3 className="mt-3">Our Features</h3>
-                <div className="d-flex justify-content-center">
-                    <div className="row mt-3">
-                        {
-                            featureData.map(feature => <FeatureDetail key={feature.id} feature={feature}></FeatureDetail>)
-                        }
+                <div className="p-5">
+                    <h2 className="text-uppercase fw-bold">Sit back while we create the experience of a lifetime</h2>
+                    <h3 className="mt-3">Our Features</h3>
+                    <div className="d-flex justify-content-center">
+                        <div className="row mt-3">
+                            {
+                                featureData.map(feature => <FeatureDetail key={feature.id} feature={feature}></FeatureDetail>)
+                            }
+                        </div>
                     </div>
                 </div>
             </Container>
