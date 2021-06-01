@@ -19,8 +19,8 @@ const Review = ({ reviewData }) => {
     };
 
     return (
-        <div className="col-md-4 mb-5">
-            <Card style={{ width: '400px', height: '700px' }}>
+        <div className="col-md-4 col-sm-6 col-12 mb-5">
+            <Card>
                 <Card.Img variant="top" src={image} style={{ width: '300px', height: '300px' }} className="m-auto" />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>

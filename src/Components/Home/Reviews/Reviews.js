@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import Review from '../Review/Review';
 
 const Reviews = () => {
@@ -12,14 +13,16 @@ const Reviews = () => {
 
     return (
         <section className="review-container text-center p-5">
-            <h1>FeedBack From Clients about our service</h1>
-            <div className="d-flex justify-content-center m-5 ">
-                <div className="row w-100 pb-5">
-                    {
-                        reviews.map(reviewData => <Review key={reviewData._id} reviewData={reviewData}></Review>)
-                    }
+            <Container>
+                <h1>FeedBack From Clients about our service</h1>
+                <div className="d-flex justify-content-center">
+                    <div className="row pb-5">
+                        {
+                            reviews.map(reviewData => <Review key={reviewData._id} reviewData={reviewData}></Review>)
+                        }
+                    </div>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 };
