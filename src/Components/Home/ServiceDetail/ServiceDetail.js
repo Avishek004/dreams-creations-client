@@ -13,8 +13,8 @@ const ServiceDetail = ({ service }) => {
     }
 
     return (
-        <div className="col-md-4 mb-5">
-            <Card style={{ width: '300px' }}>
+        <div className="col-md-4 col-sm-6 col-12 pb-3">
+            <Card>
                 <Card.Img variant="top" src={image} style={{ height: '200px' }} />
                 <Card.Body className="animation">
                     <Card.Title>{name}</Card.Title>
